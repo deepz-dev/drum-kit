@@ -92,3 +92,69 @@ footer {
   margin: 10px;
   background-color: white;
 }
+
+/* Responsive tweaks: keep alignment, preserve button backgrounds, improve touch targets */
+@media (max-width: 900px) {
+  h1 {
+    font-size: 3.6rem;
+  }
+
+  .set {
+    margin: 8% auto;
+  }
+
+  .drum {
+    width: 120px;
+    height: 120px;
+    font-size: 4rem;
+    border-width: 8px;
+    margin: 8px;
+  }
+}
+
+@media (max-width: 600px), (orientation: portrait) {
+  /* compact, touch-friendly layout for phones */
+  h1 {
+    font-size: 2.4rem;
+    margin-top: 0.8rem;
+  }
+
+  .set {
+    margin: 6% auto;
+    gap: 12px;
+    width: 100%;
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* keep centered alignment */
+    align-items: center;
+    padding: 0 12px;
+  }
+
+  .drum {
+    width: 86%;
+    max-width: 340px;
+    height: 96px;
+    font-size: 2.8rem;
+    border-width: 6px;
+    margin: 6px auto;
+    line-height: 1.6;
+  }
+
+  footer {
+    font-size: 1rem;
+    padding: 0.35em 0.6em;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10px;
+    width: calc(100% - 24px);
+    max-width: 480px;
+    background: rgba(50, 60, 70, 0.22);
+  }
+
+  /* make background fit better on small screens */
+  html {
+    background-position: center top;
+  }
+}
